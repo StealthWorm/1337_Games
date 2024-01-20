@@ -1,0 +1,13 @@
+{
+	"age": "Age",
+	"type": "Class",
+	"warrior": "Warrior",
+	"paladin": "Paladin",
+	"ladin": "Ladin",
+	"requirements_min": "Minimum Requirements",
+	"requirements_recommended": "Recommended Requirements",
+	"os": "Operating System",
+	"processor": "Processor",
+	"graphics_card": "Graphics Card",
+	"play": "Play now"
+}

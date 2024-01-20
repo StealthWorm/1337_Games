@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply 
+  bg-green-secondary-dark 
+  text-green-primary-light scrollbar 
+  scrollbar-thumb-green-secondary 
+  scrollbar-track-green-primary
+  scrollbar-thin
+  scrollbar-thumb-rounded-lg
+  bg-hero-pattern bg-fixed bg-center bg-no-repeat bg-cover
+  scrollbar-track-transparent
+}
+
+/* [data-theme="dark"] {
+  --bg-color: #282a36;
+  --bg-color-modal: #313342;
+  --primary-hover-color: #6ee7b7;
+  --secondary-hover-color: #919191;
+  --primary-border-color: #10b981;
+  --primary-focus-color: #059669;
+  --shadow-color: #065f46;
+  
+  --text-color: #e4e4e7;
+  --text-color-placeholder: #a1a1aa;
+}
+
+[data-theme="light"] {
+  --bg-color: #CECEE5;
+  --bg-color-modal: #F3F3FF;
+  --primary-hover-color: #dcfce7;
+  --secondary-hover-color: #BCBCBC;
+  --primary-border-color: #22c55e;
+  --primary-focus-color: #16a34a;
+  --shadow-color: #22c55e;
+
+  --text-color: #52525b;
+  --text-color-placeholder: #a1a1aa;
+} */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 480px) {
+  body {
+    font-size: 0.875rem/* 14px */;
+    line-height: 1.25rem/* 20px */
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1rem/* 16px */;
+    line-height: 1.5rem/* 24px */;
+  }
+}
+

@@ -1,0 +1,11 @@
+{
+	"app": {
+		"about": "sobre",
+		"contact": "contato",
+		"games": "jogos",
+		"hero": {
+			"caption": "O objetivo da 1337Games é que nossos jogos possuam jogabilidade que tragam experiência de jogos de RPGs clássicos.",
+			"title": "Gameplay clássica feita com carinho"
+		}
+	}
+}

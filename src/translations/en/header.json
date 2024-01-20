@@ -1,0 +1,11 @@
+{
+	"app": {
+		"about": "about",
+		"contact": "contact",
+		"games": "games",
+		"hero": {
+			"caption": "The goal of 1337Games is to ensure that our games provide gameplay that offers an experience similar to classic RPGs.",
+			"title": "Classic gameplay crafted with love"
+		}
+	}
+}
