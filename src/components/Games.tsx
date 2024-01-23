@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { useTranslation } from "react-i18next";
@@ -26,6 +26,23 @@ export function Games() {
     }
   });
 
+  const [randomIndex, setRandomIndex] = useState(0);
+
+  useEffect(() => {
+    const getRandomImage = () => {
+      const randomInx = Math.floor(Math.random() * 6);
+      setRandomIndex(randomInx);
+    };
+
+    getRandomImage();
+
+    const intervalId = setInterval(() => {
+      getRandomImage();
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, [randomIndex])
+
   function handleSelectGame(data: Game | null) {
     changeSelectedGame(data)
   }
@@ -37,25 +54,30 @@ export function Games() {
       </h3>
 
       <Dialog.Root>
-        <div className="w-full relative px-2 grid grid-cols-1 columns-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 overflow-x-auto scrollbar scrollbar-thin">
+        <div className="w-full relative p-6 grid grid-cols-1 columns-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 overflow-x-auto scrollbar-thin">
           {loadedData.map((game) => (
             <Dialog.Trigger key={game.id}>
-              <div
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8 }}
                 onClick={() => { handleSelectGame(selectedGame && game.id === selectedGame.id ? null : game) }}
-                className="self-center flex rounded-md min-h-[20rem] w-full h-full cursor-pointer bg-green-primary-dark border-4 border-green-500 transition-all duration-200 overflow-hidden"
+                className="self-center flex bg-transparent rounded-md min-h-[20rem] p-3 w-full h-full cursor-pointer border-2 border-zinc-50 shadow-white transition-all duration-200 hover:shadow-lg hover:shadow-zinc-100"
               >
-                <div className="flex relative w-full h-full">
+                <div className="flex relative w-full h-full overflow-hidden rounded-md">
                   <motion.img
-                    src={game.images[0]}
-                    alt={game.title}
-                    initial={{ filter: 'brightness(1) grayscale(0)' }}
-                    animate={{
-                      filter: selectedGame && game.id === selectedGame.id ? 'brightness(0.2) grayscale(100%)' : 'brightness(1) grayscale(0)',
-                    }}
+                    key={randomIndex}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                     transition={{ duration: 1 }}
-                    className="flex absolute w-full h-full object-cover" />
+                    src={game.images[randomIndex]}
+                    alt={game.title}
+                    className="flex absolute w-full h-full object-cover transition-all duration-200"
+                  />
 
-                  <div className="absolute w-full h-full bg-gradient-to-t from-black/80 to-transparent" />
+                  <div className="absolute w-full h-full bg-gradient-to-t from-black/90 from-[30%] to-transparent" />
 
                   <motion.h2
                     initial={{ bottom: 0 }}
@@ -65,7 +87,7 @@ export function Games() {
                     {game.title}
                   </motion.h2>
                 </div>
-              </div>
+              </motion.div>
             </Dialog.Trigger>
           ))}
 
@@ -211,7 +233,7 @@ export function Games() {
           }
 
         </div>
-      </Dialog.Root>
+      </Dialog.Root >
     </div >
   )
 }

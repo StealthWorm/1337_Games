@@ -4,13 +4,12 @@
 
 body {
   @apply 
-  bg-green-secondary-dark 
-  text-green-primary-light scrollbar 
+  bg-gray-400 
+  text-green-primary-light 
+  bg-hero-pattern bg-fixed bg-center bg-no-repeat bg-cover bg-blend-overlay
   scrollbar-thumb-green-secondary 
-  scrollbar-track-green-primary
   scrollbar-thin
   scrollbar-thumb-rounded-lg
-  bg-hero-pattern bg-fixed bg-center bg-no-repeat bg-cover
   scrollbar-track-transparent
 }
 

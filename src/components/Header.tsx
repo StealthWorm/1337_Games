@@ -2,6 +2,7 @@ import { GameController, Ghost, List, Sword, X } from '@phosphor-icons/react'
 import { useContext, useEffect, useState } from 'react'
 import { LayoutContext } from '../contexts/LayoutContext'
 import { useTranslation } from 'react-i18next'
+import { motion } from "framer-motion";
 
 import * as Popover from '@radix-ui/react-popover';
 
@@ -37,9 +38,28 @@ export function Header() {
   return (
     <header className="sticky top-0 z-20 flex align-center justify-end bg-green-primary/90 backdrop-blur-lg w-full p-4 md:px-12">
       <a href="#home" title="Home" className='flex w-full min-h-[10rem] overflow-hidden absolute left-0 top-0 -z-10'>
-        <img src={fire} alt="1337games logo" className='rounded-full blur-sm py-2 absolute -top-10 left-6 w-16 h-[12rem] hue-rotate-90 scale-[1] items-center -rotate-45' />
-        <img src={sword} alt="1337games logo" className='h-full max-h-[8rem] hue-rotate-30 items-center' />
-        <strong className="flex items-center font-jomhuria tracking-widest text-6xl drop-shadow-[0_0px_10px_#223429]">1337 Games</strong>
+        <div>
+          <motion.img
+            src={fire}
+            alt="1337games logo"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: 0.8
+              , repeat: Infinity
+            }}
+            className='rounded-full blur-sm py-2 absolute -top-10 left-6 w-16 h-[12rem] hue-rotate-90 scale-[1] items-center -rotate-45'
+          />
+          <motion.img
+            src={sword}
+            alt="1337games logo"
+            initial={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            animate={{ opacity: 1, x: [-150, 0], y: [-150, 0] }}
+            className='h-full max-h-[8rem] hue-rotate-30 items-center'
+          />
+        </div>
+        <strong className="flex items-start bg-gradient-to-r from-emerald-600 via-green-500 to-slate-400 text-transparent bg-clip-text font-jomhuria -ml-12 h-full py-4 tracking-widest text-5xl md:text-6xl drop-shadow-[0_0px_10px_#223429]">1337 Games</strong>
       </a>
       <div className='flex justify-between gap-4 float-right'>
         <select
@@ -81,7 +101,6 @@ export function Header() {
                     <span className="self-center  w-full uppercase text-lg">{t('header:app.contact')}</span>
                   </a>
                 </nav>
-
               </Popover.Content>
             </Popover.Portal>
           </Popover.Root>

@@ -19,7 +19,7 @@ export function Hero() {
         initial={{ y: -100, opacity: 0, scale: 0 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 2, delay: 1.5 }}
-        className='flex  text-2xl md:text-4xl text-green-secondary-dark justify-center font-jomhuria tracking-wider'
+        className='flex text-2xl md:text-4xl text-green-secondary-dark-hover drop-shadow-2xl justify-center font-jomhuria tracking-wider'
       >
         {t('header:app.hero.caption')}
       </motion.h2>
