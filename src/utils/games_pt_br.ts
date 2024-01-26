@@ -5,12 +5,12 @@ export const gamesPT_BR: Game[] = [
     id: 'a0f88b71-5062-469a-aebe-dbc7d3a5e9af',
     title: "Espada do Abismo",
     images: [
-      "src/assets/Espadadoabismo1.png",
-      "src/assets/Espadadoabismo2.png",
-      "src/assets/Espadadoabismo3.png",
-      "src/assets/Espadadoabismo4.png",
-      "src/assets/Espadadoabismo5.png",
-      "src/assets/Espadadoabismo6.png",
+      "/espada_do_abismo/Espadadoabismo1.png",
+      "/espada_do_abismo/Espadadoabismo2.png",
+      "/espada_do_abismo/Espadadoabismo3.png",
+      "/espada_do_abismo/Espadadoabismo4.png",
+      "/espada_do_abismo/Espadadoabismo5.png",
+      "/espada_do_abismo/Espadadoabismo6.png",
     ],
     summary: "Embarque nesta nova aventura repleta de mistérios e exploração, onde você vivenciará as jornadas de vários heróis tentando salvar o mundo.",
     description: [
@@ -33,7 +33,7 @@ export const gamesPT_BR: Game[] = [
         name: "Lucius",
         type: "Cavaleiro",
         age: 21,
-        slug: "src/assets/lucius1.png",
+        slug: "/espada_do_abismo/lucius1.png",
         plot: "Um de seus maiores sonhos é tornar-se um dos membros da guarda real. Ele reprovou no exame no ano passado e treinou por um ano com a determinação de se tornar tão forte e famoso quanto seu irmão, Kain."
       },
       {
@@ -41,7 +41,7 @@ export const gamesPT_BR: Game[] = [
         name: "Sherry",
         type: "Ladina",
         age: 20,
-        slug: "src/assets/sherry1.png",
+        slug: "/espada_do_abismo/sherry1.png",
         plot: "Ela é uma amiga de infância de Lucius. Sua família costumava morar em Fortgrad, e decidiram voltar alguns anos atrás. Ao atingir a idade mínima para fazer o exame, ela decidiu treinar e tentar tornar-se membro da guarda real."
       },
       {
@@ -49,7 +49,7 @@ export const gamesPT_BR: Game[] = [
         name: "Kain",
         type: "Mago",
         age: 28,
-        slug: "src/assets/kain1.png",
+        slug: "/espada_do_abismo/kain1.png",
         plot: "Um dos magos mais famosos do reino. Ele foi um ex-aluno do Arquimago Drakon e agora trabalha para ele. Kain não concorda com a ideia de seu irmão mais novo, Lucius, tornar-se membro da guarda real."
       }
     ],

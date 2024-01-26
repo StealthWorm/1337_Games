@@ -5,12 +5,12 @@ export const gamesEN_US: Game[] = [
     id: 'a0f88b71-5062-469a-aebe-dbc7d3a5e9af',
     title: "Sword of the Abyss",
     images: [
-      "src/assets/Espadadoabismo1.png",
-      "src/assets/Espadadoabismo2.png",
-      "src/assets/Espadadoabismo3.png",
-      "src/assets/Espadadoabismo4.png",
-      "src/assets/Espadadoabismo5.png",
-      "src/assets/Espadadoabismo6.png",
+      "/espada_do_abismo/Espadadoabismo1.png",
+      "/espada_do_abismo/Espadadoabismo2.png",
+      "/espada_do_abismo/Espadadoabismo3.png",
+      "/espada_do_abismo/Espadadoabismo4.png",
+      "/espada_do_abismo/Espadadoabismo5.png",
+      "/espada_do_abismo/Espadadoabismo6.png",
     ],
     summary: "Embark on this new adventure filled with mysteries and exploration, where you will experience the journeys of various heroes trying to save the world.",
     description: [
@@ -33,7 +33,7 @@ export const gamesEN_US: Game[] = [
         name: "Lucius",
         type: "Knight",
         age: 21,
-        slug: "src/assets/lucius1.png",
+        slug: "/espada_do_abismo/lucius1.png",
         plot: "One of his biggest dreams is to become one of the members of the royal guard. He failed the exam last year and trained for a year with the determination to become as strong and famous as his brother, Kain."
       },
       {
@@ -41,7 +41,7 @@ export const gamesEN_US: Game[] = [
         name: "Sherry",
         type: "Rogue",
         age: 20,
-        slug: "src/assets/sherry1.png",
+        slug: "/espada_do_abismo/sherry1.png",
         plot: "She is a childhood friend of Lucius. Her family used to live in Fortgrad, and they decided to return a few years ago. Upon reaching the minimum age to take the exam, she decided to train and try to become a member of the royal guard."
       },
       {
@@ -49,7 +49,7 @@ export const gamesEN_US: Game[] = [
         name: "Kain",
         type: "Mage",
         age: 28,
-        slug: "src/assets/kain1.png",
+        slug: "/espada_do_abismo/kain1.png",
         plot: "One of the most famous mages in the kingdom. He was a former student of Archmage Drakon and now works for him. Kain does not agree with the idea of his younger brother, Lucius, becoming a member of the royal guard."
       },
     ],
