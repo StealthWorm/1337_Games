@@ -37,7 +37,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-20 flex align-center justify-between border-b-2 bg-green-primary/90 backdrop-blur-lg w-full p-4 md:px-4">
+    <header className="sticky top-0 z-20 flex align-center justify-between items-center border-b-2 bg-green-primary/90 backdrop-blur-lg w-full py-4 md:px-4">
       <a href="#home" title="Home" className='flex w-full'>
         <div className='absolute top-0 left-0 w-full h-full -z-10'>
           {/* <motion.img
@@ -66,17 +66,23 @@ export function Header() {
             initial={{ opacity: 0, x: -500, rotate: -90 }}
             transition={{ duration: 1 }}
             animate={{ opacity: 1, x: 0 }}
-            className='w-[8rem] md:w-[8rem] lg:w-[10rem] -rotate-90 fixed -top-[4.7rem] md:-top-[4.5rem] lg:-top-[5.5rem] left-[5rem] md:left-[6rem] lg:left-[7rem]'
+            className='-rotate-90 fixed
+            w-[8rem] -top-[3.8rem] left-[6rem]
+            sm:w-[7rem] sm:-top-[2.7rem] sm:left-[6rem]
+            md:w-[8rem] md:-top-[3.6rem] md:left-[6rem]
+            lg:w-[10rem] lg:-top-[5.7rem] lg:left-[8rem]
+            xl:w-[12rem] xl:-top-[5.7rem] xl:left-[10rem]
+            '
           />
         </div>
-        <strong className="flex drop-shadow-[0_0px_20px_#000000] drop-shadow-2xl text-transparent bg-clip-text h-full items-center bg-gradient-to-r from-emerald-600 via-green-500 to-teal-300 tracking-widest text-3xl md:text-4xl lg:text-6xl">
+        <strong className="flex drop-shadow-[0_0px_20px_#000000] drop-shadow-2xl text-transparent bg-clip-text h-full items-center bg-gradient-to-r from-emerald-600 via-green-500 to-teal-300 tracking-widest text-3xl md:text-4xl lg:text-6xl xl:text-8xl">
           1337 Games
         </strong>
       </a>
 
-      <div className='flex justify-end gap-4 float-right w-full'>
+      <div className='flex justify-end gap-4 float-right w-full h-full px-4'>
         <select
-          className="flex bg-green-primary-dark p-2 h-full w-max rounded-full appearance-none cursor-pointer selection:bg-slate-300 hover:text-green-secondary transition-colors duration-200"
+          className="flex bg-green-primary-dark p-4 h-full w-max rounded-full appearance-none cursor-pointer selection:bg-slate-300 hover:text-green-secondary transition-colors duration-200"
           onChange={handleChangeLanguage}
           name="lang"
           value={lang}
