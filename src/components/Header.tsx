@@ -8,6 +8,7 @@ import * as Popover from '@radix-ui/react-popover';
 
 import fire from '../assets/fire.gif'
 import sword from '../assets/sword.svg'
+import sword2 from '../assets/sword2.svg'
 
 export function Header() {
   const { lang, changeLanguage } = useContext(LayoutContext)
@@ -36,10 +37,10 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-20 flex align-center justify-end bg-green-primary/90 backdrop-blur-lg w-full p-4 md:px-12">
-      <a href="#home" title="Home" className='flex w-full min-h-[10rem] overflow-hidden absolute left-0 top-0 -z-10'>
-        <div>
-          <motion.img
+    <header className="sticky top-0 z-20 flex align-center justify-between border-b-2 bg-green-primary/90 backdrop-blur-lg w-full p-4 md:px-4">
+      <a href="#home" title="Home" className='flex w-full border'>
+        <div className='absolute top-0 left-0 w-full h-full'>
+          {/* <motion.img
             src={fire}
             alt="1337games logo"
             initial={{ opacity: 1 }}
@@ -48,22 +49,35 @@ export function Header() {
               duration: 0.8
               , repeat: Infinity
             }}
-            className='rounded-full blur-sm py-2 absolute -top-10 left-6 w-16 h-[12rem] hue-rotate-90 scale-[1] items-center -rotate-45'
-          />
-          <motion.img
+            // className='rounded-full blur-md absolute -top-16 left-10 w-[8rem] h-[20rem] hue-rotate-90 scale-[1] items-center -rotate-45'
+            className='rounded-full blur-md absolute -top-16 left-10 w-[12rem] h-[20rem] hue-rotate-90 scale-[1] items-center -rotate-90'
+            /> */}
+          {/* <motion.img
             src={sword}
             alt="1337games logo"
             initial={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            animate={{ opacity: 1, x: [-150, 0], y: [-150, 0] }}
-            className='h-full max-h-[8rem] hue-rotate-30 items-center'
+            animate={{ opacity: 1, x: [-250, 0], y: [-250, 0] }}
+            className='w-[15rem] min-h-[18rem] hue-rotate-30 items-center absolute -top-12 -left-4'
+          /> */}
+          <motion.img
+            src={sword2}
+            alt="1337games logo"
+            initial={{ opacity: 0, x: -500, rotate: -90 }}
+            transition={{ duration: 1 }}
+            animate={{ opacity: 1, x: 0 }}
+            className='border w-[8rem] md:w-[8rem] lg:w-[10rem] -rotate-90 fixed -top-[4.7rem] md:-top-[4.5rem] lg:-top-[5.5rem] left-[5rem] md:left-[6rem] lg:left-[7rem]'
           />
+
         </div>
-        <strong className="flex items-start bg-gradient-to-r from-emerald-600 via-green-500 to-slate-400 text-transparent bg-clip-text font-jomhuria -ml-12 h-full py-4 tracking-widest text-5xl md:text-6xl drop-shadow-[0_0px_10px_#223429]">1337 Games</strong>
+        <strong className="flex drop-shadow-[0_0px_20px_#000000] drop-shadow-2xl text-transparent bg-clip-text h-full items-center bg-gradient-to-r from-emerald-600 via-green-500 to-teal-300 tracking-widest text-3xl md:text-4xl lg:text-6xl">
+          1337 Games
+        </strong>
       </a>
-      <div className='flex justify-between gap-4 float-right'>
+
+      <div className='flex justify-end gap-4 float-right w-full'>
         <select
-          className="flex bg-green-primary-dark p-2 h-full w-full rounded-full appearance-none cursor-pointer selection:bg-slate-300"
+          className="flex bg-green-primary-dark p-2 h-full w-max rounded-full appearance-none cursor-pointer selection:bg-slate-300 hover:text-green-secondary transition-colors duration-200"
           onChange={handleChangeLanguage}
           name="lang"
           value={lang}
@@ -120,7 +134,6 @@ export function Header() {
             </a>
           </nav>
         )}
-
       </div>
     </header>
   )

@@ -13,14 +13,15 @@ export default {
       lg: '976px',
       xl: '1440px',
     },
-    fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
-      jomhuria: ['Jomhuria', 'sans-serif'],
-    },
     extend: {
       backgroundImage: {
         'hero-pattern': "url('/src/assets/bg.svg')",
         'custom-bg': "radial-gradient(rgba(0, 0, 0, 0) 1px, var(#ffff) 1px)"
+      },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+        jomhuria: ['Jomhuria', 'sans-serif'],
+        angel: ['Angel', 'sans-serif'],
       },
       colors: {
         'green-primary-light': '#eaeceb',
@@ -41,6 +42,9 @@ export default {
 
         'warning': '#FACA7E',
       },
+      "boxShadow": {
+        "custom": "0 0 20px #FACA7E, #FACA7E 0px 0px 20px inset"
+      }
     },
   },
   plugins: [

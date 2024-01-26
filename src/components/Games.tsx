@@ -63,7 +63,7 @@ export function Games() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8 }}
                 onClick={() => { handleSelectGame(selectedGame && game.id === selectedGame.id ? null : game) }}
-                className="self-center flex bg-transparent rounded-md min-h-[20rem] p-3 w-full h-full cursor-pointer border-2 border-zinc-50 shadow-white transition-all duration-200 hover:shadow-lg hover:shadow-zinc-100"
+                className="self-center flex bg-transparent rounded-md min-h-[20rem] p-3 w-full h-full cursor-pointer border-2 border-zinc-50 shadow-white transition-all duration-200 hover:shadow-custom"
               >
                 <div className="flex relative w-full h-full overflow-hidden rounded-md">
                   <motion.img
@@ -139,55 +139,55 @@ export function Games() {
                       {/* REQUIREMENTS  */}
                       <div className="flex flex-col md:flex-row justify-center items-center gap-4 space-y-4 md:space-y-0 border-b pb-4">
                         <table className="table-auto flex flex-col bg-green-secondary/30 backdrop-blur-sm h-full w-full rounded-md">
-                          <thead className="flex px-4 py-2 text-base bg-green-secondary/30 h-full w-full space-y-4 rounded-t-md">
+                          <thead className="flex px-4 py-2 bg-green-secondary/30 h-12 items-center w-full rounded-t-md">
                             <tr>
                               <th scope="col">{t('common:requirements_recommended')}</th>
                             </tr>
                           </thead>
                           <tbody>
-                            <tr className="flex border-b items-center w-full w-full">
-                              <td className="px-4 py-2  font-bold w-[50%]">{t('common:os')}</td>
-                              <td className="px-4 py-2  text-sm text-sm">{selectedGame.requirements[1].os}</td>
+                            <tr className="flex border-b items-center w-full p-2">
+                              <td className="px-4 font-bold w-[50%] text-sm">{t('common:os')}</td>
+                              <td className="flex w-full justify-end text-xs items-center">{selectedGame.requirements[1].os}</td>
                             </tr>
-                            <tr className="flex border-b items-center w-full">
-                              <td className="px-4 py-2  font-bold w-[50%]">{t('common:processor')}</td>
-                              <td className="px-3 py-2 text-sm">{selectedGame.requirements[1].processor}</td>
+                            <tr className="flex border-b items-center w-full p-2">
+                              <td className="px-4 font-bold w-[50%] text-sm">{t('common:processor')}</td>
+                              <td className="flex w-full justify-end text-xs items-center">{selectedGame.requirements[1].processor}</td>
                             </tr>
-                            <tr className="flex border-b items-center w-full">
-                              <td className="px-4 py-2  font-bold w-[50%]">{t('common:RAM')}</td>
-                              <td className="px-3 py-2 text-sm">{selectedGame.requirements[1].RAM}</td>
+                            <tr className="flex border-b items-center w-full p-2">
+                              <td className="px-4 font-bold w-[50%] text-sm">{t('common:RAM')}</td>
+                              <td className="flex w-full justify-end text-xs items-center">{selectedGame.requirements[1].RAM}</td>
                             </tr>
-                            <tr className="flex border-b last:border-b-0">
-                              <td className="px-4 py-2  font-bold w-[50%]">{t('common:graphics_card')}</td>
-                              <td className="px-3 py-2 text-sm text-sm">{selectedGame.requirements[1].graphics_card}</td>
+                            <tr className="flex border-b last:border-b-0 w-full p-2">
+                              <td className="px-4 font-bold w-[50%] text-sm">{t('common:graphics_card')}</td>
+                              <td className="flex w-full justify-end text-xs items-center">{selectedGame.requirements[1].graphics_card}</td>
                             </tr>
                           </tbody>
                         </table>
+
                         <table className="table-auto flex flex-col bg-green-secondary/30 backdrop-blur-sm h-full w-full rounded-md">
-                          <thead className="flex px-4 py-2 text-base bg-green-secondary/30 h-full w-full space-y-4 rounded-t-md">
+                          <thead className="flex px-4 py-2 bg-green-secondary/30 h-12 items-center w-full rounded-t-md">
                             <tr>
                               <th scope="col">{t('common:requirements_min')}</th>
                             </tr>
                           </thead>
                           <tbody>
-                            <tr className="flex border-b items-center w-full">
-                              <td className="px-4 py-2  font-bold w-[50%]">{t('common:os')}</td>
-                              <td className="px-4 py-2 text-sm">{selectedGame.requirements[0].os}</td>
+                            <tr className="flex border-b items-center w-full p-2">
+                              <td className="px-4 font-bold w-[50%] text-sm">{t('common:os')}</td>
+                              <td className="flex w-full justify-end text-xs items-center">{selectedGame.requirements[0].os}</td>
                             </tr>
-                            <tr className="flex border-b items-center w-full">
-                              <td className="px-4 py-2  font-bold w-[50%]">{t('common:processor')}</td>
-                              <td className="px-3 py-2 text-sm">{selectedGame.requirements[0].processor}</td>
+                            <tr className="flex border-b items-center w-full p-2">
+                              <td className="px-4 font-bold w-[50%] text-sm">{t('common:processor')}</td>
+                              <td className="flex w-full justify-end text-xs items-center">{selectedGame.requirements[0].processor}</td>
                             </tr>
-                            <tr className="flex border-b items-center w-full">
-                              <td className="px-4 py-2  font-bold w-[50%]">{t('common:RAM')}</td>
-                              <td className="px-3 py-2 text-sm">{selectedGame.requirements[0].RAM}</td>
+                            <tr className="flex border-b items-center w-full p-2">
+                              <td className="px-4 font-bold w-[50%] text-sm">{t('common:RAM')}</td>
+                              <td className="flex w-full justify-end text-xs items-center">{selectedGame.requirements[0].RAM}</td>
                             </tr>
-                            <tr className="flex border-b last:border-b-0 w-full">
-                              <td className="px-4 py-2  font-bold w-[50%]">{t('common:graphics_card')}</td>
-                              <td className="px-3 py-2 text-sm text-sm">{selectedGame.requirements[0].graphics_card}</td>
+                            <tr className="flex border-b last:border-b-0 w-full p-2">
+                              <td className="px-4 font-bold w-[50%] text-sm">{t('common:graphics_card')}</td>
+                              <td className="flex w-full justify-end text-xs items-center">{selectedGame.requirements[0].graphics_card}</td>
                             </tr>
                           </tbody>
-
                         </table>
                       </div>
 
@@ -212,8 +212,10 @@ export function Games() {
                         </div>
                       </div>
 
-                      <button className="flex pt-3 uppercase font-jomhuria text-6xl tracking-wider leading-tight items-center justify-center p-auto rounded-md text-green-primary-dark font-bold bg-warning hover:bg-yellow-600 transition-colors duration-200 cursor-pointer">
-                        {t('common:play')}
+                      <button className="flex pt-3 uppercase font-jomhuria text-6xl tracking-wider leading-tight items-center justify-center p-auto rounded-md text-green-primary-dark font-bold bg-warning hover:brightness-150 hover:shadow-custom transition-all duration-200 cursor-pointer">
+                        <a href="https://discord.gg/RaTV4W3qYQ" target="_blank">
+                          {t('common:play')}
+                        </a>
                       </button>
                     </div>
 
@@ -231,7 +233,6 @@ export function Games() {
               </Dialog.Content>
             </Dialog.Portal>
           }
-
         </div>
       </Dialog.Root >
     </div >
