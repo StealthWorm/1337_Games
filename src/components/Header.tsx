@@ -37,7 +37,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-20 flex align-center justify-between items-center border-b-2 bg-green-primary/90 backdrop-blur-lg w-full py-4 md:px-4">
+    <header className="sticky top-0 z-20 p-4 flex align-center justify-between items-center border-b-2 bg-green-primary/90 backdrop-blur-lg w-full">
       <a href="#home" title="Home" className='flex w-full'>
         <div className='absolute top-0 left-0 w-full h-full -z-10'>
           {/* <motion.img
@@ -66,8 +66,10 @@ export function Header() {
             initial={{ opacity: 0, x: -500, rotate: -90 }}
             transition={{ duration: 1 }}
             animate={{ opacity: 1, x: 0 }}
-            className='-rotate-90 fixed
+            className='-rotate-90 fixed 
             w-[8rem] -top-[3.8rem] left-[6rem]
+            invisible
+            md:visible
             sm:w-[7rem] sm:-top-[2.7rem] sm:left-[6rem]
             md:w-[8rem] md:-top-[3.6rem] md:left-[6rem]
             lg:w-[10rem] lg:-top-[5.7rem] lg:left-[8rem]

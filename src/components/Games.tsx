@@ -219,13 +219,9 @@ export function Games() {
                       </button>
                     </div>
 
-                    <motion.img
-                      src={selectedGame.images[1]}
+                    <img
+                      src={selectedGame.images[0]}
                       alt={selectedGame.title}
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      exit={{ scale: 0 }}
-                      transition={{ duration: .5 }}
                       className="flex absolute inset-0 grayscale brightness-[30%] object-cover w-full h-full -z-10 bg-fixed"
                     />
                   </motion.div>
