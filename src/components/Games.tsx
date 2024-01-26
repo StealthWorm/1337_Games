@@ -105,7 +105,7 @@ export function Games() {
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0, opacity: 0 }}
                     transition={{ duration: .5 }}
-                    className="flex flex-col h-full w-full inset-0 relative ">
+                    className="flex flex-col h-full w-full inset-0 relative">
 
                     {/* Header */}
                     <div className="flex justify-between sticky top-0 bg-gradient-to-b from-black/90 from-[60%] z-20 p-6 items-center">
@@ -125,7 +125,7 @@ export function Games() {
                     </div>
 
                     {/* Body */}
-                    <div className="flex flex-col p-8 space-y-6 h-full md:max-h-[20rem] overflow-y-auto scrollbar scrollbar-thin">
+                    <div className="flex flex-col p-8 space-y-6 h-full overflow-y-auto scrollbar scrollbar-thin">
                       <Dialog.Description className="flex flex-col space-y-4 border-b pb-4">
                         {selectedGame.description.map(line => {
                           if (line.type === 'paragraph') {
@@ -196,8 +196,8 @@ export function Games() {
                         <div ref={sliderRef} className="flex keen-slider w-full max-h-[28rem]">
                           {selectedGame.characters.map(dude => {
                             return (
-                              <div key={dude.id} className="keen-slider__slide flex border p-4 rounded-md backdrop-blur-sm bg-black/30 space-x-4 md:space-x-0 snap-start min-w-[40rem] flex-row md:flex-col h-full border-green-primary-light">
-                                <img src={dude.slug} alt={dude.name} className="flex object-cover w-full h-full  max-h-[12rem] max-w-[12rem] md:max-w-full" />
+                              <div key={dude.id} className="keen-slider__slide flex border p-4 h-full rounded-md backdrop-blur-sm bg-black/30 space-x-4 md:space-x-0 snap-start min-w-[40rem] flex-row md:flex-col border-green-primary-light">
+                                <img src={dude.slug} alt={dude.name} className="flex object-cover w-48 h-48 md:max-h-[12rem] md:max-w-[12rem] max-w-full max-h-full" />
                                 <div className="flex-col">
                                   <strong className="text-3xl tracking-widest font-jomhuria flex-1">{dude.name}</strong>
                                   <div className="flex gap-4 items-center text-center">

@@ -14,11 +14,11 @@ export function Contact() {
           conteudo de contato
         </div>
 
-        <div className='flex flex-col md:flex-row gap-6 font-jomhuria bg-green-primary-dark py-10 px-4 items-center justify-between md:justify-center border-t border-b border-warning'>
-          <span className="tracking-wide text-2xl md:text-4xl text-center">
+        <div className='flex w-full flex-col md:flex-row gap-6 font-jomhuria bg-green-primary-dark py-10 px-auto px-4 items-center justify-between md:justify-center border-t border-b border-warning'>
+          <span className="tracking-wide text-2xl md:text-4xl text-center w-full md:w-[60%]">
             {t('footer:app.donation.description')}
           </span>
-          <a href="https://nubank.com.br/pagar/3wy6e/aJdlSZf8Mh" target="_blank" className='flex hover:animate-none animate-pulse gap-6 justify-between items-center p-4 text-green-secondary-dark rounded-md bg-warning hover:brightness-150 hover:shadow-custom transition-all duration-200'>
+          <a href="https://nubank.com.br/pagar/3wy6e/aJdlSZf8Mh" target="_blank" className='flex w-full md:w-[40%] hover:animate-none animate-pulse gap-6 justify-center items-center p-4 text-green-secondary-dark rounded-md bg-warning hover:brightness-150 hover:shadow-custom transition-all duration-200'>
             <strong className='flex uppercase font-jomhuria tracking-widest text-xl md:text-4xl pt-2'>
               {t('footer:app.donation.title')}
             </strong>

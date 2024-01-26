@@ -6,16 +6,16 @@ import { Hero } from '../../components/Hero'
 export function Home() {
   return (
     <main className="flex flex-col w-full h-full z-0 align-center justify-center snap-y snap-mandatory scroll-smooth">
-      <section id="home" className='flex h-screen snap-start'>
+      <section id="home" className='flex h-screen snap-start  pt-[6.27rem] md:pt-[5.5rem] lg:pt-[7.5rem]'>
         <Hero />
       </section>
-      <section id="games" className='flex h-screen snap-start md:md:pt-[4.5rem] pt-[4.27rem]'>
+      <section id="games" className='flex h-screen snap-start pt-[6.27rem] md:pt-[5.5rem] lg:pt-[7.5rem]'>
         <Games />
       </section>
-      <section id="about" className='flex h-screen snap-start md:pt-[4.5rem] pt-[4.27rem]'>
+      <section id="about" className='flex h-screen snap-start pt-[6.27rem] md:pt-[5.5rem] lg:pt-[7.5rem]'>
         <About />
       </section>
-      <section id="contact" className='flex h-screen snap-start md:pt-[4.5rem] pt-[4.27rem]'>
+      <section id="contact" className='flex h-screen snap-start pt-[6.27rem] md:pt-[5.5rem] lg:pt-[7.5rem]'>
         <Contact />
       </section>
     </main>

@@ -21,7 +21,7 @@ export default {
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
         jomhuria: ['Jomhuria', 'sans-serif'],
-        angel: ['Angel', 'sans-serif'],
+        honk: ['Honk', 'sans-serif'],
       },
       colors: {
         'green-primary-light': '#eaeceb',
