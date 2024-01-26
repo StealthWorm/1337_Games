@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 import * as Popover from '@radix-ui/react-popover';
 
-import fire from '../assets/fire.gif'
-import sword from '../assets/sword.svg'
+// import fire from '../assets/fire.gif'
+// import sword from '../assets/sword.svg'
 import sword2 from '../assets/sword2.svg'
 
 export function Header() {
@@ -38,8 +38,8 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-20 flex align-center justify-between border-b-2 bg-green-primary/90 backdrop-blur-lg w-full p-4 md:px-4">
-      <a href="#home" title="Home" className='flex w-full border'>
-        <div className='absolute top-0 left-0 w-full h-full'>
+      <a href="#home" title="Home" className='flex w-full'>
+        <div className='absolute top-0 left-0 w-full h-full -z-10'>
           {/* <motion.img
             src={fire}
             alt="1337games logo"
@@ -66,9 +66,8 @@ export function Header() {
             initial={{ opacity: 0, x: -500, rotate: -90 }}
             transition={{ duration: 1 }}
             animate={{ opacity: 1, x: 0 }}
-            className='border w-[8rem] md:w-[8rem] lg:w-[10rem] -rotate-90 fixed -top-[4.7rem] md:-top-[4.5rem] lg:-top-[5.5rem] left-[5rem] md:left-[6rem] lg:left-[7rem]'
+            className='w-[8rem] md:w-[8rem] lg:w-[10rem] -rotate-90 fixed -top-[4.7rem] md:-top-[4.5rem] lg:-top-[5.5rem] left-[5rem] md:left-[6rem] lg:left-[7rem]'
           />
-
         </div>
         <strong className="flex drop-shadow-[0_0px_20px_#000000] drop-shadow-2xl text-transparent bg-clip-text h-full items-center bg-gradient-to-r from-emerald-600 via-green-500 to-teal-300 tracking-widest text-3xl md:text-4xl lg:text-6xl">
           1337 Games

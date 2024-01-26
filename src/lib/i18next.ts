@@ -21,15 +21,17 @@ const resources = {
   }
 };
 
-i18n.use(initReactI18next).init({
-  resources,
-  lng: 'de',
-  fallbackLng: 'de',
-  preload: true,
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    // lng: 'de',
+    fallbackLng: 'de',
+    // preload: true,
 
-  interpolation: {
-    escapeValue: false
-  }
-});
+    interpolation: {
+      escapeValue: false
+    }
+  });
 
 export default i18n;
