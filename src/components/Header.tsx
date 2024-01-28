@@ -77,7 +77,7 @@ export function Header() {
             '
           />
         </div>
-        <strong className="flex drop-shadow-[0_0px_20px_#000000] drop-shadow-2xl text-transparent bg-clip-text h-full items-center bg-gradient-to-r from-emerald-600 via-green-500 to-teal-300 tracking-widest text-3xl md:text-4xl lg:text-6xl xl:text-8xl">
+        <strong className="flex drop-shadow-[0_0px_2px_rgb(167_243_208)] tracking-widest bg-eme text-slate-50 drop-shadow-2xl  font-extrabold  h-full items-center text-3xl md:text-4xl lg:text-6xl xl:text-8xl">
           1337 Games
         </strong>
       </a>

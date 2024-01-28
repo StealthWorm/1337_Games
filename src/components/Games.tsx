@@ -93,11 +93,11 @@ export function Games() {
 
           {selectedGame &&
             <Dialog.Portal>
-              <Dialog.Overlay className="bg-black/50 inset-0 fixed backdrop-blur-md" />
+              <Dialog.Overlay className="bg-black/50 inset-0 fixed backdrop-blur-md z-30" />
 
               <Dialog.Content
                 onInteractOutside={() => handleSelectGame(null)}
-                className="flex flex-col inset-0 z-20 fixed w-full h-full rounded-lg  m-auto shadow-lg md:max-w-[calc(100vw/2)] md:max-h-[calc(100vh/2)] scrollbar scrollbar-thin"
+                className="flex flex-col inset-0 z-50 fixed w-full h-full rounded-lg  m-auto shadow-lg md:max-w-[calc(100vw/2)] md:max-h-[calc(100vh-4rem)] scrollbar-thin"
               >
                 <AnimatePresence>
                   <motion.div
@@ -193,11 +193,11 @@ export function Games() {
 
                       {/* CHARACTERS  */}
                       <div className="flex">
-                        <div ref={sliderRef} className="flex keen-slider w-full max-h-[28rem]">
+                        <div ref={sliderRef} className="flex keen-slider w-full min-h-[28rem] overflow-hidden">
                           {selectedGame.characters.map(dude => {
                             return (
-                              <div key={dude.id} className="keen-slider__slide flex border p-4 h-full rounded-md backdrop-blur-sm bg-black/30 space-x-4 md:space-x-0 snap-start min-w-[40rem] flex-row md:flex-col border-green-primary-light">
-                                <img src={dude.slug} alt={dude.name} className="flex object-cover w-48 h-48 md:max-h-[12rem] md:max-w-[12rem] max-w-full max-h-full" />
+                              <div key={dude.id} className="keen-slider__slide snap-center flex flex-col border p-4 rounded-md backdrop-blur-sm bg-black/30 border-green-primary-light space-x-0 space-y-3">
+                                <img src={dude.slug} alt={dude.name} className="flex object-cover max-h-36 md:max-h-[12rem] md:max-w-[12rem]" />
                                 <div className="flex-col">
                                   <strong className="text-3xl tracking-widest font-jomhuria flex-1">{dude.name}</strong>
                                   <div className="flex gap-4 items-center text-center">
@@ -220,7 +220,7 @@ export function Games() {
                     </div>
 
                     <img
-                      src={selectedGame.images[0]}
+                      src={selectedGame.images[1]}
                       alt={selectedGame.title}
                       className="flex absolute inset-0 grayscale brightness-[30%] object-cover w-full h-full -z-10 bg-fixed"
                     />
