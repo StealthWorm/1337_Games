@@ -97,7 +97,7 @@ export function Games() {
 
               <Dialog.Content
                 onInteractOutside={() => handleSelectGame(null)}
-                className="flex flex-col inset-0 z-50 fixed w-full h-full rounded-lg  m-auto shadow-lg md:max-w-[calc(100vw/2)] md:max-h-[calc(100vh-4rem)] scrollbar-thin"
+                className="flex flex-col inset-0 z-50 fixed w-full h-full rounded-lg  m-auto shadow-lg lg:max-w-[calc(100vw/2)] md:max-h-[calc(100vh-4rem)] scrollbar-thin"
               >
                 <AnimatePresence>
                   <motion.div
@@ -193,7 +193,7 @@ export function Games() {
 
                       {/* CHARACTERS  */}
                       <div className="flex">
-                        <div ref={sliderRef} className="flex keen-slider w-full min-h-[28rem] overflow-hidden">
+                        <div ref={sliderRef} className="flex keen-slider w-full max-h-[28rem] overflow-hidden">
                           {selectedGame.characters.map(dude => {
                             return (
                               <div key={dude.id} className="keen-slider__slide snap-center flex flex-col border p-4 rounded-md backdrop-blur-sm bg-black/30 border-green-primary-light space-x-0 space-y-3">
