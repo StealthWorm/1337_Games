@@ -37,7 +37,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-20 p-4 flex align-center justify-between items-center border-b-2 bg-green-primary/90 backdrop-blur-lg w-full">
+    <header className="sticky top-0 z-20 p-2 md:p-4 flex align-center justify-between items-center border-b-2 bg-green-primary/50 backdrop-blur-lg w-full">
       <a href="#home" title="Home" className='flex w-full'>
         <div className='absolute top-0 left-0 w-full h-full -z-10'>
           {/* <motion.img
@@ -71,18 +71,18 @@ export function Header() {
             invisible
             md:visible
             sm:w-[7rem] sm:-top-[2.7rem] sm:left-[6rem]
-            md:w-[8rem] md:-top-[3.6rem] md:left-[6rem]
+            md:w-[8rem] md:-top-[4.1rem] md:left-[6rem]
             lg:w-[10rem] lg:-top-[5.7rem] lg:left-[8rem]
             xl:w-[12rem] xl:-top-[5.7rem] xl:left-[10rem]
             '
           />
         </div>
-        <strong className="flex drop-shadow-[0_0px_2px_rgb(167_243_208)] tracking-widest bg-eme text-slate-50 drop-shadow-2xl  font-extrabold  h-full items-center text-3xl md:text-4xl lg:text-6xl xl:text-8xl">
+        <strong className="flex drop-shadow-[0_0px_2px_rgb(167_243_208)] tracking-widest bg-eme text-slate-50 drop-shadow-2xl  font-extrabold  h-full items-center text-xl md:text-4xl lg:text-6xl xl:text-8xl">
           1337 Games
         </strong>
       </a>
 
-      <div className='flex justify-end gap-4 float-right w-full h-full px-4'>
+      <div className='flex justify-end gap-4 float-right w-full h-full px-4 text-xs'>
         <select
           className="flex bg-green-primary-dark p-4 h-full w-max rounded-full appearance-none cursor-pointer selection:bg-slate-300 hover:text-green-secondary transition-colors duration-200"
           onChange={handleChangeLanguage}

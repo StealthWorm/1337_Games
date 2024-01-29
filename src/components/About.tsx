@@ -4,7 +4,7 @@ export function About() {
   const { t } = useTranslation()
 
   return (
-    <div className="flex flex-col h-full w-full bg-green-primary/90 backdrop-blur-lg bg-green-primary p-8 gap-4 overflow-hidden">
+    <div className="flex flex-col h-full w-full backdrop-blur-lg bg-green-primary/80  p-8 gap-4 overflow-hidden">
       <h3 className="flex uppercase text-3xl md:text-5xl text-green-primary-light justify-center font-jomhuria tracking-wider">
         {t('header:app.about')}
       </h3>
