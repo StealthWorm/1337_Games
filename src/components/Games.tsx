@@ -54,7 +54,8 @@ export function Games() {
       </h3>
 
       <Dialog.Root>
-        <div className="w-full relative p-6 grid grid-cols-1 columns-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 overflow-x-auto scrollbar-thin">
+      {/* columns-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  */}
+        <div className="w-full relative p-6 grid grid-cols-autofit md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 overflow-x-auto scrollbar-thin">
           {loadedData.map((game) => (
             <Dialog.Trigger key={game.id}>
               <motion.div

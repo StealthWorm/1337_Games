@@ -23,6 +23,9 @@ export default {
         jomhuria: ['Jomhuria', 'sans-serif'],
         Ringbearer: ['Ringbearer', 'sans-serif'],
       },
+      gridTemplateColumns: {
+        'autofit': 'repeat(auto-fit, minmax(300px, 1fr))'
+      },
       colors: {
         'green-primary-light': '#eaeceb',
         'green-primary-light-hover': '#e0e3e1',
