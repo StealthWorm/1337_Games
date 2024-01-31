@@ -21,7 +21,7 @@ export default {
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
         jomhuria: ['Jomhuria', 'sans-serif'],
-        honk: ['Honk', 'sans-serif'],
+        Ringbearer: ['Ringbearer', 'sans-serif'],
       },
       colors: {
         'green-primary-light': '#eaeceb',

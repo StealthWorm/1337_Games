@@ -58,3 +58,10 @@ body {
   }
 }
 
+@layer base {
+  @font-face {
+    font-family: 'Ringbearer';
+    font-weight: 400;
+    src: url('./fonts/Ringbearer.ttf') format("ttf");
+  }
+}

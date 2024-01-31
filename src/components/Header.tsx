@@ -77,9 +77,10 @@ export function Header() {
             '
           />
         </div>
-        <strong className="flex drop-shadow-[0_0px_2px_rgb(167_243_208)] tracking-widest bg-eme text-slate-50 drop-shadow-2xl  font-extrabold  h-full items-center text-xl md:text-4xl lg:text-6xl xl:text-8xl">
-          1337 Games
-        </strong>
+        <div className="flex font-Ringbearer text-slate-50 drop-shadow-2xl h-full items-center gap-4">
+          <strong className="drop-shadow-[0_0px_2px_rgb(167_243_208)] tracking-widest text-transparent text-5xl bg-gradient-to-r from-emerald-700 via-green-600 to-emerald-500 bg-clip-text text-2xl md:text-4xl lg:text-6xl xl:text-8xl">1337</strong>
+          <span className='drop-shadow-[0_0px_2px_rgb(167_243_208)] tracking-widest text-2xl md:text-4xl lg:text-6xl xl:text-8xl'>Games</span>
+        </div>
       </a>
 
       <div className='flex justify-end gap-4 float-right w-full h-full px-4 text-xs'>
