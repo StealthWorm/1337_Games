@@ -15,7 +15,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/src/assets/bg.svg')",
+        'hero-pattern': "url('/src/assets/bg.png')",
         'custom-bg': "radial-gradient(rgba(0, 0, 0, 0) 1px, var(#ffff) 1px)"
       },
       fontFamily: {
