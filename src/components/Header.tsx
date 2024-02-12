@@ -6,8 +6,6 @@ import { motion } from "framer-motion";
 
 import * as Popover from '@radix-ui/react-popover';
 
-// import fire from '../assets/fire.gif'
-// import sword from '../assets/sword.svg'
 import sword2 from '../assets/sword2.svg'
 
 export function Header() {
@@ -37,29 +35,9 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-20 p-2 md:p-4 flex align-center justify-between items-center border-b-2 bg-green-primary/50 backdrop-blur-lg w-full">
+    <header className="sticky top-0 z-20 p-2 md:p-4 flex align-center justify-between items-center border-b-2 bg-gradient-to-r from-green-950/80 from-40% to-green-primary/40  backdrop-blur-lg w-full">
       <a href="#home" title="Home" className='flex w-full'>
         <div className='absolute top-0 left-0 w-full h-full -z-10'>
-          {/* <motion.img
-            src={fire}
-            alt="1337games logo"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              duration: 0.8
-              , repeat: Infinity
-            }}
-            // className='rounded-full blur-md absolute -top-16 left-10 w-[8rem] h-[20rem] hue-rotate-90 scale-[1] items-center -rotate-45'
-            className='rounded-full blur-md absolute -top-16 left-10 w-[12rem] h-[20rem] hue-rotate-90 scale-[1] items-center -rotate-90'
-            /> */}
-          {/* <motion.img
-            src={sword}
-            alt="1337games logo"
-            initial={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            animate={{ opacity: 1, x: [-250, 0], y: [-250, 0] }}
-            className='w-[15rem] min-h-[18rem] hue-rotate-30 items-center absolute -top-12 -left-4'
-          /> */}
           <motion.img
             src={sword2}
             alt="1337games logo"
@@ -78,7 +56,7 @@ export function Header() {
           />
         </div>
         <div className="flex font-Ringbearer text-slate-50 drop-shadow-2xl h-full items-center gap-4">
-          <strong className="drop-shadow-[0_0px_2px_rgb(167_243_208)] tracking-widest text-transparent text-4xl bg-gradient-to-r from-emerald-700 via-green-600 to-emerald-500 bg-clip-text md:text-4xl lg:text-6xl xl:text-8xl">1337</strong>
+          <strong className="drop-shadow-[0_0_2px_rgb(167_243_208)] tracking-widest text-transparent text-4xl bg-gradient-to-r from-emerald-700 via-green-600 to-emerald-500 bg-clip-text md:text-4xl lg:text-6xl xl:text-8xl">1337</strong>
           <span className='drop-shadow-[0_0px_2px_rgb(167_243_208)] tracking-widest text-2xl md:text-4xl lg:text-6xl xl:text-8xl'>Games</span>
         </div>
       </a>

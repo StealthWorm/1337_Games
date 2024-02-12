@@ -28,7 +28,7 @@ export function Contact() {
   }
 
   return (
-    <div className="relative flex flex-col h-full w-full bg-green-primary/70 backdrop-blur-lg md:p-8 gap-4 overflow-hidden items-center justify-start">
+    <div className="relative flex flex-col h-full w-full bg-gradient-to-b from-green-950/80 from-40% to-green-primary/40  backdrop-blur-lg md:p-8 gap-4 overflow-hidden items-center justify-start">
       <h3 className="flex uppercase text-3xl md:text-5xl text-green-primary-light justify-center font-jomhuria tracking-wider">
         {t('header:app.contact')}
       </h3>
@@ -36,15 +36,15 @@ export function Contact() {
       <div className="flex flex-col md:w-max mx-4 w-full space-y-4">
         <div className='flex md:flex-row flex-col items-center justify-between mx-4 gap-6'>
           <div className='flex items-center gap-2'>
-            <Phone size={30} className='text-emerald-500 animate-pulse' />
+            <Phone size={30} className='text-amber-300 animate-pulse' />
             <p className='text-md w-full'>+55 (81) 985632622</p>
           </div>
           <div className='flex items-center gap-2'>
-            <Envelope size={30} className='text-emerald-500 animate-pulse' />
+            <Envelope size={30} className='text-amber-300 animate-pulse' />
             <p className='text-md w-full'>leandro.nunes19xl@gmail.com</p>
           </div>
           <div className='flex items-center gap-2'>
-            <MapPin size={30} className='text-emerald-500 animate-pulse' />
+            <MapPin size={30} className='text-amber-300 animate-pulse' />
             <p className='text-md w-full'>Recife, Pernambuco, Brasil </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ export function Contact() {
               id="subject"
               {...register('subject')}
               placeholder='Email subject'
-              type='text' 
+              type='text'
               className='contactInput'
             />
             {errors.subject && <p className="errorMessage">{errors.subject.message}</p>}
@@ -92,7 +92,7 @@ export function Contact() {
             {errors.message && <p className="errorMessage">{errors.message.message}</p>}
           </div>
 
-          <button className='bg-emerald-500 py-4 px-10 rounded-md text-black font-bold text-lg' type='submit'>
+          <button className='bg-emerald-500 py-4 px-10 rounded-md text-white font-bold text-lg tracking-widest uppercase hover:brightness-150 hover:shadow-custom transition-all duration-200' type='submit'>
             Submit
           </button>
         </form>
