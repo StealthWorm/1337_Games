@@ -4,8 +4,6 @@ import { useTranslation } from "react-i18next"
 export function About() {
   const { t } = useTranslation()
 
-  const decodedSlug = t('about:description_project');
-
   return (
     <div className="relative flex flex-col h-full w-full bg-gradient-to-r from-green-950/80 from-40% to-green-primary/40  backdrop-blur-lg gap-4 overflow-hidden items-center justify-start">
       <h3 className="flex uppercase text-3xl md:p-8 md:text-5xl text-green-primary-light justify-center font-jomhuria tracking-wider">
