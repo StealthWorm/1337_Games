@@ -3,30 +3,32 @@
 @tailwind utilities;
 
 body {
-  @apply 
-  bg-gray-400 
+  @apply bg-gray-400 
   text-green-primary-light 
   bg-hero-pattern bg-fixed bg-center bg-no-repeat bg-cover bg-blend-overlay
-  scrollbar-thumb-green-secondary 
   scrollbar-thin
+  scrollbar-thumb-green-secondary 
   scrollbar-thumb-rounded-lg
   scrollbar-track-transparent
+  scrollbar-corner-transparent
+  scrollbar-track-rounded-3xl
+  scrollbar-w-1;
 }
 
 @layer components {
   .heroButton {
-    @apply px-6 py-2 my-2 border border-emerald-500 rounded-full uppercase text-xs tracking-widest text-gray-500 backdrop-blur-md transition-all hover:border-emerald-500/40 hover:text-emerald-500/40
+    @apply px-6 py-2 my-2 border border-emerald-500 rounded-full uppercase text-xs tracking-widest text-gray-500 backdrop-blur-md transition-all hover:border-emerald-500/40 hover:text-emerald-500/40;
   }
   .contactInput {
     @apply outline-none bg-slate-400/10 rounded-sm border-b min-h-10 max-h-28 px-4 py-2 border-emerald-500 text-slate-400 placeholder-slate-100/20 transition-all focus:text-emerald-400 focus:border-b
-    hover:border-emerald-500/40
-  } 
+    hover:border-emerald-500/40;
+  }
   .contactButton {
     @apply bg-transparent text-gray-400 border border-emerald-500 font-bold py-2 px-5 rounded-md hover:text-white hover:border-[white] hover:duration-1000;
   }
- .errorMessage {
-   @apply text-xs text-red-500 font-bold
- }
+  .errorMessage {
+    @apply text-xs text-red-500 font-bold;
+  }
 }
 
 /* [data-theme="dark"] {
@@ -62,15 +64,15 @@ body {
 
 @media (min-width: 480px) {
   body {
-    font-size: 0.875rem/* 14px */;
-    line-height: 1.25rem/* 20px */
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem; /* 20px */
   }
 }
 
 @media (min-width: 768px) {
   body {
-    font-size: 1rem/* 16px */;
-    line-height: 1.5rem/* 24px */;
+    font-size: 1rem /* 16px */;
+    line-height: 1.5rem /* 24px */;
   }
 }
 
@@ -78,6 +80,6 @@ body {
   @font-face {
     font-family: 'Ringbearer';
     font-weight: 400;
-    src: url('./fonts/Ringbearer.ttf') format("ttf");
+    src: url('./fonts/Ringbearer.ttf') format('ttf');
   }
 }

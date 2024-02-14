@@ -68,7 +68,7 @@ export default function GameModal() {
             </div>
 
             {/* Body */}
-            <div className="flex flex-col p-8 space-y-6 h-full overflow-y-auto scrollbar scrollbar-thin">
+            <div className="flex flex-col p-8 space-y-6 h-full overflow-y-auto scrollbar-thin">
               <Dialog.Description className="flex flex-col space-y-4 border-b pb-4">
                 {selectedGame.description.map(line => {
                   if (line.type === 'paragraph') {
