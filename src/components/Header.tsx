@@ -81,51 +81,54 @@ export function Header() {
             PT-BR
           </option>
         </select>
-        {isSmallScreen ? (
-          <Popover.Root open={popOverOpen} onOpenChange={handleOpenPopOver}>
+        <Popover.Root open={popOverOpen} onOpenChange={handleOpenPopOver}>
+          {isSmallScreen ? (
             <Popover.Trigger asChild>
-              <button className="flex hover:text-green-secondary items-center transition-colors duration-200 " >
+              <button className="flex hover:text-green-secondary items-center transition-colors duration-200">
                 <List size={32} />
               </button>
             </Popover.Trigger>
-            <Popover.Portal>
-              <Popover.Content className=" z-20 flex p-4 flex-col bg-green-primary-dark rounded-md min-w-[10rem]" sideOffset={16}>
-                <Popover.Close className="flex justify-end hover:text-green-secondary" >
-                  <X size={24} />
-                </Popover.Close>
-                <nav className='flex flex-col gap-4 items-center bg-green-primary-dark text-green-primary-light rounded-full text-xs md:text-sm'>
-                  <a href="#games" title="Jogos" className="flex align-center gap-2 justify-between w-full hover:text-green-secondary-hover duration-200" onClick={handleOpenPopOver}>
-                    <GameController size={24} weight="bold" />
-                    <span className="self-center w-full uppercase text-lg">{t('header:app.games')}</span>
-                  </a>
-                  <a href="#about" title="Jogos" className="flex align-center gap-2 justify-between w-full hover:text-green-secondary-hover duration-200" onClick={handleOpenPopOver}>
-                    <Sword size={24} weight="bold" />
-                    <span className="self-center  w-full uppercase text-lg">{t('header:app.about')}</span>
-                  </a>
-                  <a href="#contact" title="Jogos" className="flex align-center gap-2 justify-between w-full hover:text-green-secondary-hover duration-200" onClick={handleOpenPopOver}>
-                    <Ghost size={24} weight="bold" />
-                    <span className="self-center  w-full uppercase text-lg">{t('header:app.contact')}</span>
-                  </a>
-                </nav>
-              </Popover.Content>
-            </Popover.Portal>
-          </Popover.Root>
-        ) : (
-          <nav className='flex gap-4 md:gap-8 items-center bg-green-primary-dark text-green-primary-light rounded-full py-2 px-4 text-xs md:text-sm'>
-            <a href="#games" title="Jogos" className="flex align-center gap-2 hover:text-green-secondary-hover duration-200">
-              <GameController size={24} weight="bold" className="w-4 h-4 md:w-6 md:h-6" />
-              <span className="self-center uppercase">{t('header:app.games')}</span>
-            </a>
-            <a href="#about" title="Jogos" className="flex align-center gap-2 hover:text-green-secondary-hover duration-200">
-              <Sword size={24} weight="bold" className="w-4 h-4 md:w-6 md:h-6" />
-              <span className="self-center uppercase">{t('header:app.about')}</span>
-            </a>
-            <a href="#contact" title="Jogos" className="flex align-center gap-2 hover:text-green-secondary-hover duration-200">
-              <Ghost size={24} weight="bold" className="w-4 h-4 md:w-6 md:h-6" />
-              <span className="self-center uppercase">{t('header:app.contact')}</span>
-            </a>
-          </nav>
-        )}
+
+          ) : (
+            <nav className='flex gap-4 md:gap-8 items-center bg-green-primary-dark text-green-primary-light rounded-full py-2 px-4 text-xs md:text-sm'>
+              <a href="#games" title="Jogos" className="flex align-center gap-2 hover:text-green-secondary-hover duration-200">
+                <GameController size={24} weight="bold" className="w-4 h-4 md:w-6 md:h-6" />
+                <span className="self-center uppercase">{t('header:app.games')}</span>
+              </a>
+              <a href="#about" title="Jogos" className="flex align-center gap-2 hover:text-green-secondary-hover duration-200">
+                <Sword size={24} weight="bold" className="w-4 h-4 md:w-6 md:h-6" />
+                <span className="self-center uppercase">{t('header:app.about')}</span>
+              </a>
+              <a href="#contact" title="Jogos" className="flex align-center gap-2 hover:text-green-secondary-hover duration-200">
+                <Ghost size={24} weight="bold" className="w-4 h-4 md:w-6 md:h-6" />
+                <span className="self-center uppercase">{t('header:app.contact')}</span>
+              </a>
+            </nav>
+          )}
+          <div className="fixed top-2">
+            {/* <Popover.Portal> */}
+            <Popover.Content className="sticky top-0 z-20 flex p-4 flex-col bg-green-primary-dark rounded-md min-w-[10rem]" sideOffset={16}>
+              <Popover.Close className="flex justify-end hover:text-green-secondary" >
+                <X size={24} />
+              </Popover.Close>
+              <nav className='flex flex-col gap-4 items-center bg-green-primary-dark text-green-primary-light rounded-full text-xs md:text-sm'>
+                <a href="#games" title="Jogos" className="flex align-center gap-2 justify-between w-full hover:text-green-secondary-hover duration-200" onClick={handleOpenPopOver}>
+                  <GameController size={24} weight="bold" />
+                  <span className="self-center w-full uppercase text-lg">{t('header:app.games')}</span>
+                </a>
+                <a href="#about" title="Jogos" className="flex align-center gap-2 justify-between w-full hover:text-green-secondary-hover duration-200" onClick={handleOpenPopOver}>
+                  <Sword size={24} weight="bold" />
+                  <span className="self-center  w-full uppercase text-lg">{t('header:app.about')}</span>
+                </a>
+                <a href="#contact" title="Jogos" className="flex align-center gap-2 justify-between w-full hover:text-green-secondary-hover duration-200" onClick={handleOpenPopOver}>
+                  <Ghost size={24} weight="bold" />
+                  <span className="self-center  w-full uppercase text-lg">{t('header:app.contact')}</span>
+                </a>
+              </nav>
+            </Popover.Content>
+            {/* </Popover.Portal> */}
+          </div>
+        </Popover.Root>
       </div>
     </header>
   )
