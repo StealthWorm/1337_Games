@@ -11,7 +11,7 @@ export function Games() {
   const { t } = useTranslation()
 
   return (
-    <div className="relative flex flex-col h-full w-full bg-gradient-to-br from-green-950/80 from-40% to-green-primary/40  backdrop-blur-lg md:p-8 gap-4 overflow-hidden items-center justify-start">
+    <div className="relative flex flex-col h-full w-full bg-gunmetal/90 backdrop-blur-lg md:p-8 gap-4 overflow-hidden items-center justify-start">
       <h3 className="flex uppercase text-3xl md:text-5xl text-green-primary-light justify-center font-jomhuria tracking-wider">
         {t('header:app.games')}
       </h3>

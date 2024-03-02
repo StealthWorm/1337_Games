@@ -43,6 +43,11 @@ export default {
         'green-secondary-dark': '#658c60',
         'green-secondary-dark-hover': '#51704d',
 
+        'green-forest': '#248232',
+        'rich-black': '#040F0F',
+        'pigment-green': '#2ba84a',
+        'gunmetal': '#2d3a3a',
+
         'warning': '#FACA7E',
       },
       "boxShadow": {

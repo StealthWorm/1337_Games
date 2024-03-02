@@ -11,8 +11,8 @@ body {
   scrollbar-thumb-rounded-lg
   scrollbar-track-transparent
   scrollbar-corner-transparent
-  scrollbar-track-rounded-3xl
-  scrollbar-w-1;
+  whitespace-pre-line
+  backdrop-blur-sm;
 }
 
 @layer components {

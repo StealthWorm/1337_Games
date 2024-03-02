@@ -35,7 +35,11 @@ i18n
 
     interpolation: {
       escapeValue: false
-    }
+    },
+    react: {
+      transSupportBasicHtmlNodes: true, // Allow basic HTML tags
+      transKeepBasicHtmlNodesFor: ['br'], // Preserve <br> tags
+    },
   });
 
 export default i18n;

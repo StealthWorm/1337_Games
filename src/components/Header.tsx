@@ -35,7 +35,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-20 p-2 md:p-4 flex align-center justify-between items-center border-b-2 bg-gradient-to-r from-green-950/80 from-40% to-green-primary/40  backdrop-blur-lg w-full">
+    <header className="sticky top-0 z-20 p-2 md:p-4 flex align-center justify-between items-center border-b-2 bg-gunmetal/90 backdrop-blur-lg w-full">
       <a href="#home" title="Home" className='flex w-full'>
         <div className='absolute top-0 left-0 w-full h-full -z-10'>
           <motion.img
@@ -56,8 +56,14 @@ export function Header() {
           />
         </div>
         <div className="flex font-Ringbearer text-slate-50 drop-shadow-2xl h-full items-center gap-4">
-          <strong className="drop-shadow-[0_0_2px_rgb(167_243_208)] tracking-widest text-transparent text-4xl bg-gradient-to-r from-emerald-700 via-green-600 to-emerald-500 bg-clip-text md:text-4xl lg:text-6xl xl:text-8xl">1337</strong>
-          <span className='drop-shadow-[0_0px_2px_rgb(167_243_208)] tracking-widest text-2xl md:text-4xl lg:text-6xl xl:text-8xl'>Games</span>
+          <div className="flex relative w-full">
+            <strong className="absolute blur-lg tracking-widest text-transparent text-6xl text-emerald-500 md:text-4xl lg:text-6xl xl:text-8xl">1337</strong>
+            <strong className="drop-shadow-[0_0_2px_rgb(167_243_208)] tracking-widest text-transparent text-4xl bg-gradient-to-r from-emerald-700 via-green-600 to-emerald-500 bg-clip-text md:text-4xl lg:text-6xl xl:text-8xl">1337</strong>
+          </div>
+          <div className="flex relative w-full">
+            <span className='absolute drop-shadow-[0_0px_2px_rgb(167_243_208)] tracking-widest text-2xl md:text-4xl lg:text-6xl xl:text-8xl'>Games</span>
+            <span className='tracking-widest text-2xl md:text-4xl lg:text-6xl xl:text-8xl blur-md'>Games</span>
+          </div>
         </div>
       </a>
 
