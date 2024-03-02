@@ -5,7 +5,7 @@ export function About() {
   const { t } = useTranslation()
 
   return (
-    <div className="relative flex flex-col h-full w-full bg-gunmetal/90 backdrop-blur-lg gap-4 overflow-hidden items-center justify-start">
+    <div className="relative flex flex-col whitespace-pre-line h-full w-full bg-gunmetal/90 backdrop-blur-lg gap-4 overflow-hidden items-center justify-start">
       <h3 className="flex uppercase text-3xl md:p-8 md:text-5xl text-green-primary-light justify-center font-jomhuria tracking-wider">
         {t('header:app.about')}
       </h3>
