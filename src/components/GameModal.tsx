@@ -36,11 +36,11 @@ export default function GameModal() {
 
   return (
     <Dialog.Portal>
-      <Dialog.Overlay className="bg-black/50 inset-0 fixed backdrop-blur-md z-30" />
-
+      <Dialog.Overlay className="bg-black/40 inset-0 fixed backdrop-blur-md z-40 items-center justify-center" />
       <Dialog.Content
         onInteractOutside={() => handleSelectGame(null)}
-        className="flex flex-col inset-0 z-50 fixed w-full h-full rounded-lg  m-auto shadow-lg lg:max-w-[calc(100vw/2)] md:max-h-[calc(100vh-4rem)] scrollbar-thin"
+        className="flex absolute z-40 w-screen h-screen self-center rounded-lg shadow-lg top-[47rem] items-center justify-center
+        lg:top-[60rem] lg:left-[calc(100vw/4)] lg:max-w-[calc(100vw/2)] lg:max-h-[calc(100vh/2)] lg:overflow-hidden"
       >
         <AnimatePresence>
           <motion.div
@@ -173,3 +173,4 @@ export default function GameModal() {
     </Dialog.Portal>
   )
 }
+

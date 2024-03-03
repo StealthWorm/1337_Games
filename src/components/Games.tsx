@@ -17,16 +17,16 @@ export function Games() {
       </h3>
 
       <Dialog.Root>
-        <div className="w-full relative p-6 grid grid-cols-autofit md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 overflow-x-auto scrollbar-thin">
+        <div className="w-full h-auto relative p-6 grid grid-cols-autofit md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 overflow-x-auto scrollbar-thin">
           {loadedData.map((game) => (
             <Dialog.Trigger key={game.id}>
               <GameCard gameInfo={game} />
             </Dialog.Trigger>
           ))}
 
-          <GameModal />
         </div>
-      </Dialog.Root >
+        <GameModal />
+      </Dialog.Root>
     </div >
   )
 }

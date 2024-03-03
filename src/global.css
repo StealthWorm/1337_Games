@@ -2,15 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply scrollbar-thin
+  scrollbar-thumb-green-secondary 
+  scrollbar-thumb-rounded-lg
+  scrollbar-track-black
+  scrollbar-corner-transparent;
+}
+
 body {
   @apply bg-gray-400 
   text-green-primary-light 
   bg-hero-pattern bg-fixed bg-center bg-no-repeat bg-cover bg-blend-overlay
-  scrollbar-thin
-  scrollbar-thumb-green-secondary 
-  scrollbar-thumb-rounded-lg
-  scrollbar-track-transparent
-  scrollbar-corner-transparent
   backdrop-blur-sm;
 }
 
