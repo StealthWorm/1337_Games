@@ -50,14 +50,11 @@ export const LayoutContext = createContext({} as LayoutContextType)
 
 export function LayoutContextProvider({ children }: LayoutContextProviderProps) {
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
-
   const [lang, setLang] = useState(() => {
     const storedStateAsJSON = localStorage.getItem('@lang')
-
     if (storedStateAsJSON) {
       return (JSON.parse(storedStateAsJSON))
     }
-
     return 'br'
   })
 

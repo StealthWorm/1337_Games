@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { Game, LayoutContext } from "../contexts/LayoutContext";
+import { useRandomImage } from "../Hooks/useRandomImage";
 
 interface GameProps {
   gameInfo: Game;
@@ -8,22 +9,7 @@ interface GameProps {
 
 export default function GameCard({ gameInfo }: GameProps) {
   const { selectedGame, changeSelectedGame } = useContext(LayoutContext)
-  const [randomIndex, setRandomIndex] = useState(0);
-
-  useEffect(() => {
-    const getRandomImage = () => {
-      const randomInx = Math.floor(Math.random() * 6);
-      setRandomIndex(randomInx);
-    };
-
-    getRandomImage();
-
-    const intervalId = setInterval(() => {
-      getRandomImage();
-    }, 5000);
-
-    return () => clearInterval(intervalId);
-  }, [randomIndex])
+  const currentIndex = useRandomImage(gameInfo);
 
   function handleSelectGame(data: Game | null) {
     changeSelectedGame(data)
@@ -40,12 +26,12 @@ export default function GameCard({ gameInfo }: GameProps) {
     >
       <div className="flex relative w-full h-full overflow-hidden rounded-md">
         <motion.img
-          key={randomIndex}
+          key={currentIndex}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
-          src={gameInfo.images[randomIndex]}
+          src={gameInfo.images[currentIndex]}
           alt={gameInfo.title}
           className="flex absolute w-full h-full object-cover transition-all duration-200"
         />
