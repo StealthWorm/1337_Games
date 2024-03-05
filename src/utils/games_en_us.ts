@@ -5,12 +5,12 @@ export const gamesEN_US: Game[] = [
     id: 'a0f88b71-5062-469a-aebe-dbc7d3a5e9af',
     title: "Sword of the Abyss",
     images: [
-      "/espada_do_abismo/espadadoabismo1.png",
-      "/espada_do_abismo/espadadoabismo2.png",
-      "/espada_do_abismo/espadadoabismo3.png",
-      "/espada_do_abismo/espadadoabismo4.png",
-      "/espada_do_abismo/espadadoabismo5.png",
-      "/espada_do_abismo/espadadoabismo6.png",
+      "/dist/espada_do_abismo/espadadoabismo1.png",
+      "/dist/espada_do_abismo/espadadoabismo2.png",
+      "/dist/espada_do_abismo/espadadoabismo3.png",
+      "/dist/espada_do_abismo/espadadoabismo4.png",
+      "/dist/espada_do_abismo/espadadoabismo5.png",
+      "/dist/espada_do_abismo/espadadoabismo6.png",
     ],
     summary: "Embark on this new adventure filled with mysteries and exploration, where you will experience the journeys of various heroes trying to save the world.",
     description: [

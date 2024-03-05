@@ -5,12 +5,12 @@ export const gamesPT_BR: Game[] = [
     id: 'a0f88b71-5062-469a-aebe-dbc7d3a5e9af',
     title: "Espada do Abismo",
     images: [
-      "/espada_do_abismo/espadadoabismo1.png",
-      "/espada_do_abismo/espadadoabismo2.png",
-      "/espada_do_abismo/espadadoabismo3.png",
-      "/espada_do_abismo/espadadoabismo4.png",
-      "/espada_do_abismo/espadadoabismo5.png",
-      "/espada_do_abismo/espadadoabismo6.png",
+      "/dist/espada_do_abismo/espadadoabismo1.png",
+      "/dist/espada_do_abismo/espadadoabismo2.png",
+      "/dist/espada_do_abismo/espadadoabismo3.png",
+      "/dist/espada_do_abismo/espadadoabismo4.png",
+      "/dist/espada_do_abismo/espadadoabismo5.png",
+      "/dist/espada_do_abismo/espadadoabismo6.png",
     ],
     summary: "Embarque nesta nova aventura repleta de mistérios e exploração, onde você vivenciará as jornadas de vários heróis tentando salvar o mundo.",
     description: [
